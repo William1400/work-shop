@@ -1,4 +1,36 @@
 # INTRODUCTION
+## PRÉSENTATION DE TYPESCRIPT
+TypeScript est un langage  à typage statique conçu par Anders Heljsberg (également concepteur du langage C#). Son but est de rendre plus fiable et facile l'écriture du code en JavaScript. Le code en TS sera compilé en JS. (comme SCSS)
+
+## Quels sont les avantages de TS?
+- Limites les erreurs
+- Meilleure autocomplétion et documentation
+- Cible la version de compilation du code TS en JS (ES5,ES6, etc)
+
+## Quels sont les désavantages de TS?
+- Outils supplémentaire
+- L'écosystème JavaScript
+- Perte en flexibilité (mais gagne en prévisibilité)
+
+## TYPAGE
+Le principal apport du langage TypeScript est la possibilité d'associer un type à une donnée.
+
+```
+let result: number;
+let message: string;
+let response: boolean;
+let obj: any;
+```
+- **number** : pour les nombres entiers ou flottants.
+- **string** : pour les chaînes de caractères.
+- **boolean** : pour les booléens donc true ou false.
+- **any** : type par défaut attribuer par TS à une variable globale s'il ne reconnait pas son type lors de sa déclaration.
+
+Le typage peut aussi se faire implicitement:
+``let message = "Hello World"  // message sera un string``
+
+
+# HOW TO USE IT
 
 Commençons par créer une première application Web simple avec TypeScript.
 
@@ -44,13 +76,21 @@ Le résultat sera un fichier greeter.js qui contient le même JavaScript que cel
 Nous pouvons maintenant commencer à tirer parti de certains des nouveaux outils offerts par TypeScript. Ajoutez une annotation de type : string à l'argument de la fonction 'person' comme indiqué ici :
 
 ```
-function greeter(person: <span style="color=red">string </span>) {
-  return "Hello, " + person;
+function greeter(person: string) {
+  console.log("Hello, " + person);
 }
  
-let user = "Jane User";
+let user = "John Doe";
+
+greeter(user);
 ```
 
+## Annotations de type
 
+Les annotations de type dans TypeScript sont des moyens légers d'enregistrer le contrat prévu de la fonction ou de la variable. Dans ce cas, nous souhaitons que la fonction greeter soit appelée avec un seul paramètre de type string. Nous pouvons essayer de modifier l'appel de la fonction greeter pour passer un tableau à la place :
+
+
+
+## Connexion à l'api REST API 
 
 
