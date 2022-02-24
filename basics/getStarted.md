@@ -11,6 +11,10 @@ TypeScript est un langage  à typage statique conçu par Anders Heljsberg (égal
 - Outils supplémentaire
 - L'écosystème JavaScript
 - Perte en flexibilité (mais gagne en prévisibilité)
+- Code moins lisible
+  
+## A QUEL MOMENT UTILISER TYPESCRIPT ?
+TS permet d'apporter une rigueur dans votre code. Sa prévisibilité permet d'éviter les bugs. Son ciblage permet de nous passer d'outil comme "Babel" par exemple. C'est pourquoi nous vous conseillons d'utiliser TS pour de gros projets.
 
 ## TYPAGE
 Le principal apport du langage TypeScript est la possibilité d'associer un type à une donnée.
