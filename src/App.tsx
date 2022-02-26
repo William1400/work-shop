@@ -8,7 +8,7 @@ import QuestionCard from './components/QuestionCard';
 import { QuestionState, Difficulty } from './API';
 
 // Styles
-import { GlobalStyle } from './components/App.styles';
+import { GlobalStyle, Wrapper } from './App.styles';
 
 export type AnswerObject = {
 
@@ -49,10 +49,13 @@ function App() {
 
             //Users Answer
             const answer = e.currentTarget.value;
+
             // Check answer against correct answer
             const correct = questions[number].correct_answer === answer;
+
             // Add score if answer is correct
             if (correct) setScore(prev => prev + 1);
+            
             // Save answer in the array in the array for user userAnswers
             const answerObject = {
 
@@ -84,7 +87,7 @@ function App() {
 
         <>
             <GlobalStyle />
-            <div className="App">
+            <Wrapper>
                 <h1>React Quiz</h1>
                 {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
 
@@ -107,7 +110,7 @@ function App() {
 
                     <button className="next" onClick={nextQuestion}>Next Question</button>
                 ) : null}
-            </div>
+            </Wrapper>
         </>
     );
 }
