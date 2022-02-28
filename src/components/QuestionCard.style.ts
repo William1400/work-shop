@@ -38,12 +38,14 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
         width: 100%;
         height: 40px;
         margin: 5px 0 0;
+        
+        /* change  le background color du boutton selon la situation */
         background: ${({ correct, userClicked }) => 
             correct
-                ? 'linear-gradient(90deg, #56ffA4, #59BC86)'
-                : !correct && userClicked
-                ? 'linear-gradient(90deg, #FF5656, #C16868)'
-                : 'linear-gradient(90deg, #56ffA4,  #59BC86)'
+            ? 'linear-gradient(90deg, #56ffA4, #59BC86)'
+            : !correct && userClicked
+            ? 'linear-gradient(90deg, #FF5656, #C16868)'
+            : 'linear-gradient(90deg, #56ccff,  #6eafb4)'
         };
         border: 2px solid #FFF;
         box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
